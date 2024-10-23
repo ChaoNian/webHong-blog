@@ -36,7 +36,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          node-version-file: '.nvmrc'
+          cache: ''
+          scope: ''
+          registry-url: ''
+          always-auth: ''
+          architecture: ''
+          token: ${{ github.server_url == 'https://github.com' && github.token || '' }}
+          check-latest: false
+          cache-dependency-path: ''
+          node-version-file: 'package.json' # '.nvmrc'
           cache: pnpm # 缓存设置为 pnpm
           version: 8.14.0 # 您可以根据需要指定特定的 pnpm 版本
       - name: Setup Pages
