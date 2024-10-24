@@ -5,6 +5,8 @@ export default defineConfig({
   description: "A VitePress Site",
   // header标签里面插入的内容
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  // 部署的时候需要注意该参数避免样式丢失
+  base: "/webHong-blog/",
   themeConfig: {
     // 网站的logo
     logo: "/logo.svg",
@@ -55,8 +57,6 @@ export default defineConfig({
       },
     ],
     // 社交链接
-    socialLinks: [{ icon: "github", link: "https://github.com/ChinaCarlos" }],
-    // 部署的时候需要注意该参数避免样式丢失
-    base: "/webHong-blog/",
+    socialLinks: [{ icon: "github", link: "https://github.com/ChinaCarlos" }]
   },
 });
