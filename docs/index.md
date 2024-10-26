@@ -9,7 +9,7 @@ hero:
   text: "前端之旅"
   tagline: WebHond's Blog Web Site
   image:
-    src: /pwa.svg
+    src: /public/background.svg
     alt: VitePress
   actions:
     # - theme: brand
@@ -20,10 +20,10 @@ hero:
     #   link: https://carlosme.fun
     - theme: alt
       text: 我的博客
-      link: https://carlosme.fun
+      link: /blogs/blogs
     - theme: alt
       text: 前端面经
-      link: https://carlosme.fun
+      link: /faceClassic
     # - theme: alt
     #   text: 支持一下
     #   link: https://carlosme.fun

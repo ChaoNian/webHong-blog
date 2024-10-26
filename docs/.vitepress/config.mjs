@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-  title: "My Awesome Project",
+  title: "WebHong 前端之旅",
   description: "A VitePress Site",
   // header标签里面插入的内容
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
@@ -9,7 +9,7 @@ export default defineConfig({
   base: "/webHong-blog/",
   themeConfig: {
     // 网站的logo
-    logo: "/logo.svg",
+    logo: "/public/logo.png",
     // 文章右侧大纲目录
     outline: {
       level: [2, 6],
@@ -32,7 +32,7 @@ export default defineConfig({
     // 页脚
     footer: {
       message: "Released under the MIT License.",
-      copyright: "Copyright © 2023-present China Carlos",
+      copyright: "Copyright © 2023-present China webHong",
     },
     // 文档的最后更新时间
     lastUpdated: {
@@ -49,12 +49,28 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+        text: "博客",
+         items: [
+          { text: "react项目创建", link: "/blogs/react/create" },
+          { text: "Vue", link: "/vue" },
         ],
       },
+      {
+        text: "面经",
+        link: "/faceClassic" 
+        // items: [
+        //   { text: "JS", link: "/javaScript" },
+        //   { text: "Vue", link: "/vue" },
+        // ],
+      },
+      // {
+      //   text: "Examples",
+      //   items: [
+      //     { text: "Markdown Examples", link: "/markdown-examples" },
+      //     { text: "Runtime API Examples", link: "/api-examples" },
+      //   ],
+      // },
+      { text: "关于我", link: "/pages/about" },
     ],
     // 社交链接
     socialLinks: [{ icon: "github", link: "https://github.com/ChinaCarlos" }]
