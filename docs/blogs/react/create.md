@@ -168,3 +168,62 @@ package.json
 }
 
  ```
+
+ ## 使用create-react-app 脚手架 创建项目
+ 1、创建步骤
+        安装脚手架[mac 电脑需要加sudo]
+        ```shell
+            npm i create-react-app -g 
+        ```
+        检查安装情况
+        ```shell
+            create-react-app --version 
+        ```
+    基于脚手架创建React 工程化的项目
+    ```shell
+        create-react-app project-name
+    ```
+    或者
+     ```shell
+        npx create-react-app project-name
+    ```
+    注意 项目名字遵循 npm包命名规范，使用 数字、小写字母、_
+
+项目目录
+    |- node_modules
+    |- src
+        |- index.js
+    |- public
+        |- index.html
+    |- package.json
+    |- ...
+ 使用脚手架创建项目发现没有配置文件；哪为什么呢？
+ 一个React 项目中， 默认会安装：
+   react： React 框架的核心
+   react-dom: React 视图渲染的核心【基于React 构建WebApp HTML页面】
+   React-native:构建和渲染App
+   reat-scripts: 脚手架为了让项目目录看起来干净一些，把webpack打包的规则及相关插件/Loader 等都隐藏到node_modules目下，react-scripts 就是脚手架中自己对打包命令的一种封装，会调用node_modules 中的webpack等进行处理
+
+
+## 使用Vite 创建项目
+如果你的项目代码量比较大，或者你厌恶了 webpack 的打包速度，那么你可以选择使用 vite 来创建你的 React 应用。
+
+vite 采用浏览器支持 ES 模块来解决开发时构建缓慢的问题，使用 esbuild 预构建依赖（开发时不会变动的纯 JavaScript 代码，一般是 node_modules 中的第三方包）。
+
+vite 不但支持 vue 还支持 react、preact、svelte 等框架和原生 js。
+
+使用 create-vite 创建应用
+使用 vite 创建项目也非常简单
+```shell
+npm create vite@latest
+```
+我们可以在命令行中选择需要使用的的框架
+
+选择使用 JavaScript 还是 typescript 开发
+使用 npm run dev 启动，
+
+资料参考
+
+https://cloud.tencent.com/developer/article/2240912
+
+https://juejin.cn/post/7110535158863757319
